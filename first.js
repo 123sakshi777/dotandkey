@@ -330,9 +330,6 @@ async function getSortedProducts(inputValue) {
 }
 
 
-
-
-
 document.querySelectorAll('input[name="class"]').forEach((radio) => {
   radio.addEventListener('change', () => {
     const checkedRadio = document.querySelector('input[name="class"]:checked');
@@ -538,7 +535,7 @@ openOption.addEventListener("click",()=>{
 
 window.scrollTo({
   top: 0,
-  // behavior: 'smooth'
+   behavior: 'smooth'
 });
 
 }
