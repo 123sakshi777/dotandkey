@@ -422,66 +422,63 @@ const newPriceObject = { ...priceObject };
 console.log( "new=",newPriceObject);
 
  let cart=[];
-async function atcCall() {
-    const cartElement = document.querySelector(".atc-container");
-    document.querySelector(".atc-wrapper").style.display="flex";
-let bodytag=document.querySelector("body")
+
+ async function atcCall() {
+  const cartElement = document.querySelector(".atc-container");
+  document.querySelector(".atc-wrapper").style.display = "flex";
+  let bodytag = document.querySelector("body");
   bodytag.classList.toggle("st-atc-open");
 
-    cartElement.innerHTML = ""; 
+  cartElement.innerHTML = "";
+  console.log('cart in atc call is', cart);
 
-    console.log('cart in atc call is',cart)
+  let totalAmount = 0;
+  let priceCal = document.querySelector(".priceCalculate");
+  priceCal.innerHTML = ""; 
+  const fetchPromises = cart.map(async (productId) => {
+    const URL = `https://dummyjson.com/products/${productId.id}`;
+    const promise = await fetch(URL);
+    const datavalue = await promise.json();
 
-    cart.forEach((productId) => {
-      (async () => {
-        const URL = `https://dummyjson.com/products/${productId.id}`;
-        const promise = await fetch(URL);
-        const datavalue = await promise.json();
-        console.log("datavalue", datavalue);
-        productId.title=datavalue.title;
-        productId.price=datavalue.price;
-        cartElement.innerHTML += `
-          <div class="product-cart">
-            <div class="st-product-cart">
-              <div class="st-heading">
-                <span class="product-atc">1 ${datavalue.title} added to your cart</span>
+    productId.title = datavalue.title;
+    productId.price = datavalue.price;
+
+    totalAmount += datavalue.price;
+
+    cartElement.innerHTML += `
+      <div class="product-cart">
+        <div class="st-product-cart">
+          <div class="st-heading">
+            <span class="product-atc">1 ${datavalue.title} added to your cart</span>
+          </div>
+          <div class="product-content">
+            <img class="st-image-hero" src="${datavalue.thumbnail}" alt="${datavalue.title}">
+            <div class="product-list">
+              <div class="product-name">
+                <span class="product-code">${datavalue.title}</span>
               </div>
-              <div class="product-content">
-                <img class="st-image-hero" src="${datavalue.thumbnail}" alt="${datavalue.title}">
-                <div class="product-list">
-                  <div class="product-name">
-                    <span class="product-code">${datavalue.title}</span>
-                  </div>
-                  <div class="st-quantity">
-                    <span>1 piece</span>
-                  </div>
-                  <div class="st-price">
-                    <span>Rs. ${datavalue.price}</span>
-                  </div>
-                  <div class="view-cart">
-                    <span class="st-cart">view cart</span>
-                  </div>
-                </div>
+              <div class="st-quantity">
+                <span>1 piece</span>
+              </div>
+              <div class="st-price">
+                <span>Rs. ${datavalue.price}</span>
+              </div>
+              <div class="view-cart">
+                <span class="st-cart">view cart</span>
               </div>
             </div>
           </div>
-        `;
-      })(); 
-    });
-
-  setTimeout(()=>{
-    let priceCal= document.querySelector(".priceCalculate")
-  priceCal.innerHTML = "";
-  let totalAmount=0;
-  cart.forEach(product=>{
-    totalAmount=totalAmount+product.price;
-
+        </div>
+      </div>
+    `;
   });
-  priceCal.innerHTML=`Price: ${totalAmount}`
 
-  },100)  
 
-  }
+  await Promise.all(fetchPromises);
+
+  priceCal.innerHTML = `Price: ${totalAmount}`;
+}
+
   let closeVar=document.querySelector(".st-close");
   closeVar.addEventListener("click",()=>{
     document.querySelector(".atc-wrapper").style.display="none";
@@ -544,7 +541,7 @@ function openRazorpayCheckout() {
   console.log('cart in openRazorpayCheckout is', cart);
 
   // ✅ Calculate totalAmount first
-  let totalAmount = 0;
+  let totalAmount = 0;  
   cart.forEach(product => {
     totalAmount += product.price * product.quantity; // also multiply by quantity
   });
