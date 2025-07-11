@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</head>
+ <body onload="getProducts()">
+<div class="card-layout"></div>
+<div class="page-width">
+<div class="main-content-wrap">
+<div class="st-column-20">
+  <img src="c:\Users\Sakshi\OneDrive\Pictures\Saved Pictures\images.jpg" alt="logo">
+
+    <div class="st-colum-80">
+<div class="st-filter-sidebar">
+<div class="st-filter-main-header">
+ <div class="st-row">
+  <div class="filter-heading">
+    <span class="st-filter-heading">Filter By</span>
+  </div>
+ <div class="st-filter-main-body">
+ <div class="st_product_type_filter">
+<div class="st-filter-header">
+  <div class="st-filter">
+    <span class="st-filter-title">Product Type</span>
+    <button type="button" id="uncheck-btn">clear</button>
+  </div>
+  <div class="st-filter-list">
+    <div class="st-filter-list-wrapper">
+      <div class="st-filter-label">
+        <div class="filter-label">
+        
+<label class="filter-labels">
+<input type="radio" value="combo" name="filter" id="101" >
+
+        <span class="st-custom-select-box" title=""></span>
+        <span class="st-filter-value">combo</span>
+</label>
+
+     
+       
+        
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+   
+<div class="st-row">
+
+ <div class="st-column-80">
+
+ <div class="st-column-20 st-align-right">
+
+</div>
+ </div>
+  </div>
+ </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+ </div>
+</div>
+</div>
+
+
+<div class="st-column-80">
+<div class="search-bar">
+  <div class="search-area">
+    <input placeholder="Search for  more products" class="search-tab" id="1098">
+    <span class="search-icon">
+      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.43395 17.4879C14.092 17.4879 17.8679 13.7875 17.8679 9.22271C17.8679 4.6579 14.092 0.95752 9.43395 0.95752C4.77593 0.95752 1 4.6579 1 9.22271C1 13.7875 4.77593 17.4879 9.43395 17.4879Z" stroke="black" stroke-linejoin="round"></path>
+        <path d="M12.24 5.98631C11.8718 5.6246 11.4344 5.33776 10.9527 5.14227C10.4711 4.94678 9.95479 4.84649 9.43347 4.84717C8.91216 4.84649 8.39585 4.94678 7.91421 5.14227C7.43257 5.33776 6.99511 5.6246 6.62695 5.98631M15.497 15.1651L19.7065 19.2904" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </span>
+    <span  class="nav-item " aria-expanded="false">
+      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart" viewBox="0 0 1365 1024"><path stroke-width="21.333" stroke="#000" d="M532.618 772.741c-57.987 0-105.431 46.933-105.431 104.296s47.444 104.296 105.431 104.296c57.987 0 105.431-46.933 105.431-104.296s-47.444-104.296-105.431-104.296zm0 173.827c-38.658 0-70.287-31.289-70.287-69.531s31.629-69.531 70.287-69.531 70.287 31.289 70.287 69.531-31.629 69.531-70.287 69.531zm351.437-173.827c-57.987 0-105.431 46.933-105.431 104.296s47.444 104.296 105.431 104.296c57.987 0 105.431-46.933 105.431-104.296s-47.444-104.296-105.431-104.296zm0 173.827c-38.658 0-70.287-31.289-70.287-69.531s31.629-69.531 70.287-69.531 70.287 31.289 70.287 69.531-31.629 69.531-70.287 69.531zm244.249-695.309c-8.786-3.477-19.329 1.738-21.086 12.168l-128.275 422.4H451.787L270.797 89.6c-1.757-6.953-8.786-12.168-17.572-12.168H68.72c-10.543 0-17.572 6.953-17.572 17.383s7.029 17.383 17.572 17.383h172.204l179.233 596.227c1.757 6.953 8.786 12.168 17.572 12.168h553.514c7.029 0 14.057-5.215 17.572-12.168l131.789-434.568c1.757-8.691-3.514-19.121-12.3-22.598z"></path><path fill="#ff8f8f" stroke-width="64" stroke="#000" d="M1313.851 259.951c0 120.003-96.803 217.284-216.216 217.284s-216.216-97.281-216.216-217.284c0-120.003 96.803-217.284 216.216-217.284s216.216 97.281 216.216 217.284z"></path></svg></span>
+
+
+  </div>
+
+ </div>
+
+  <div class="st-result">
+      <div class="st-column-60">
+        <span class="st-summary-label">Showing <strong><span class="count">
+  
+</span></strong> Result(s) for <strong>"All"</strong></span>
+      </div>
+       <div class="st-coloumn-40">
+ <div class="st-sort">
+  <label class="st-sorting-label">Sort By</label>
+  <ul class="sort-list">
+    <li >
+      <form>
+      <label class="sort-label">
+<input type="radio" value="Title(A TO Z)" name="class" id="101">
+Title(A TO Z)
+      </label>
+    </li>
+      <li >
+      <label class="sort-label">
+<input type="radio" value="Title(Z TO A)" name="class" id="102">
+Title(Z TO A)
+      </label>
+    </li>
+    <li >
+      <label class="sort-label">
+<input type="radio" value="Price(High to Low)" name="class" id="103">
+Price(High to Low)
+      </label>
+    </li>
+    <li >
+      <label class="sort-label">
+<input type="radio" value="Price(Low to High)" name="class" id="104">
+Price(Low to High)
+      </label>
+    </li>
+    
+  </form>
+
+  </ul>
+
+ </div>
+ </div>
+    </div>
+  <div class="st-result-list" id="productList"></div>
+<div class="atc-wrapper">
+
+<div class="close-option">
+  <div class="close-opt">Your Cart</div>
+  <div class="st-close">
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 1024 1024"><path d="M446.174 512L13.632 79.458c-18.177-18.177-18.177-47.649 0-65.826s47.649-18.177 65.826 0L512 446.174 944.542 13.632c18.177-18.177 47.649-18.177 65.826 0s18.177 47.649 0 65.826L577.826 512l432.542 432.542c18.177 18.177 18.177 47.649 0 65.826s-47.649 18.177-65.826 0L512 577.826 79.458 1010.368c-18.177 18.177-47.649 18.177-65.826 0s-18.177-47.649 0-65.826L446.174 512z"></path></svg>
+  </div>
+</div>
+
+  <div class="atc-container">
+  
+  </div>
+   <div class="priceCalculate">
+  </div>
+  <button onclick="openRazorpayCheckout()">Pay Now</button>
+
+  
+
+</div>
+   <!-- <div class="st-result-list">
+    
+    <div class="st-product-card">
+    <div class="st-outer-box">
+      
+      
+      <div class="st-image-container">
+        <div class="st-image-wrapper">
+          <img class="st-hero-image" src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/BRMoisturizerListing1-175g_large.jpg?v=1744370012" alt="Barrier Repair Moisturizer (Hyaluronic + Ceramides)">
+        
+
+            </div>
+
+          </div>
+          <div class="st-inner-box">
+          <div class="st-product-name">
+        
+              <span>Barrier Repair Moisturizer (Hyaluronic + Ceramides)</span>
+
+        </div>
+        <div class="extra-field">
+            <span class="st-extra-field-value">delivers intense moisturization</span>
+
+          </div>
+          <div class="st-badge-main">
+          <div class="st-badge">
+            <svg fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path></g></svg>
+          (4.78) </div>
+          <div class="badge"> (432) </div>
+          </div>
+
+        <div class="swatch-container">
+          <div class="st-size-box">
+        
+              <label class="st-swatch-border">
+                <span class="swatch1"title="175g"> 175g</span>
+
+              </label>
+               <label class="swatch-border">
+                <span class="swatch2"title="100g"> 100g</span>
+
+              </label>
+        
+
+
+            </div>
+
+
+          </div>
+          
+          <div class="extra-field-offer">
+            <span class="extra-field-value">
+              <img src="https://www.dotandkey.com/cdn/shop/files/Group_2243_1.svg?v=1723079824" alt="Flat Icon" style="width:16px; height:16px;">
+              buy 2 @ 699
+            </span>
+
+          </div>
+          <div class="st-price-box">
+            <div class="single-price-value">
+              <span class="st-currency-symbol">&#x20B9</span>
+              <span class="st-sale-price">395</span>
+
+            </div>
+            </div>
+        
+            
+ </div>
+<div class="add-to-cart">
+              <button class="st-atc">
+                add to cart
+
+              </button>
+             
+ </div>
+</div>         
+</div>
+ <div class="st-product-card">
+    <div class="st-outer-box">
+      
+      
+      <div class="st-image-container">
+        <div class="st-image-wrapper">
+          <img class="st-hero-image" src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/brsun80_large.jpg?v=1727354299" alt="Barrier Repair Hydrating Sunscreen SPF 50+ PA++++">
+        
+
+            </div>
+
+          </div>
+          <div class="st-inner-box">
+          <div class="st-product-name">
+        
+              <span>Barrier Repair Moisturizer (Hyaluronic + Ceramides)</span>
+
+        </div>
+        <div class="extra-field">
+            <span class="st-extra-field-value">protects, repairs &amp; hydrates skin</span>
+
+          </div>
+          <div class="st-badge-main">
+          <div class="st-badge">
+            <svg fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path></g></svg>
+          (4.70) </div>
+          <div class="badge"> (134) </div>
+          </div>
+
+        <div class="swatch-container">
+          <div class="st-size-box">
+        
+              <label class="st-swatch-border">
+                <span class="swatch1"title="80g"> 80g</span>
+
+              </label>
+               <label class="swatch-border">
+                <span class="swatch2"title="50g"> 50g</span>
+
+              </label>
+        
+
+
+            </div>
+
+
+          </div>
+          
+          <div class="extra-field-offer">
+            <span class="extra-field-value">
+              <img src="https://www.dotandkey.com/cdn/shop/files/Group_2243_1.svg?v=1723079824" alt="Flat Icon" style="width:16px; height:16px;">
+              buy 2 @ 699
+            </span>
+
+          </div>
+          <div class="st-price-box">
+            <div class="single-price-value">
+              <span class="st-currency-symbol">&#x20B9</span>
+              <span class="st-sale-price">455</span>
+
+            </div>
+            </div>
+        
+            
+ </div>
+<div class="add-to-cart">
+              <button class="st-atc">
+                add to cart
+
+              </button>
+             
+ </div>
+</div>         
+</div>
+<div class="st-product-card">
+    <div class="st-outer-box">
+      
+      
+      <div class="st-image-container">
+        <div class="st-image-wrapper">
+          <img class="st-hero-image" src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/brmoistcopy_large.jpg?v=1731062834" alt="Barrier Repair Moisturizer-Pack of 2">
+        
+
+            </div>
+
+          </div>
+          <div class="st-inner-box">
+          <div class="st-product-name">
+        
+              <span>Barrier Repair Moisturizer (Hyaluronic + Ceramides)</span>
+
+        </div>
+        <div class="extra-field-val">
+            <span class="st-extra-field-value">delivers intense moisturization</span>
+
+          </div>
+          
+
+        <div class="swatch-container">
+          <div class="st-size-box">
+        
+              <label class="st-swatch-border">
+                <span class="swatch"title="350g"> 350g</span>
+
+              </label>
+               
+
+
+            </div>
+
+
+          </div>
+          
+          <div class="extra-field-offer">
+            <span class="extra-field-value">
+               Upto 35% OFF + Free Gifts
+                        
+            </span>
+
+          </div>
+          <div class="st-price-box">
+            <div class="single-price-value">
+              <span class="st-currency-symbol">&#x20B9</span>
+              <span class="st-sale-price">395</span>
+
+            </div>
+            </div>
+        
+            
+ </div>
+<div class="add-to-cart">
+              <button class="st-atc">
+                add to cart
+
+              </button>
+             
+ </div>
+</div>         
+</div>
+
+
+ 
+ <div class="st-product-card">
+    <div class="st-outer-box">
+      
+      
+      <div class="st-image-container">
+        <div class="st-image-wrapper">
+          <img class="st-hero-image" src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/1-1_7f312f45-a060-4520-819a-eac06ecbcf43_large.jpg?v=1747048528" alt="Barrier Repair Oil-Free Moisturizer with Ceramides">
+        
+
+            </div>
+
+          </div>
+          <div class="st-inner-box">
+          <div class="st-product-name">
+        
+              <span>Barrier Repair Moisturizer (Hyaluronic + Ceramides)</span>
+
+        </div>
+       
+          <div class="st-badge-min">
+          <div class="st-badge">
+            <svg fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path></g></svg>
+          (4.78) </div>
+          <div class="badge"> (432) </div>
+          </div>
+
+        <div class="swatch-container">
+          <div class="st-size-box">
+        
+              <label class="st-swatch-border">
+                <span class="swatch"title="50g"> 50g</span>
+
+              </label>
+               
+
+
+            </div>
+
+
+          </div>
+          
+          <div class="extra-field-offer">
+            <span class="extra-field-value">
+              <img src="https://www.dotandkey.com/cdn/shop/files/Group_2243_1.svg?v=1723079824" alt="Flat Icon" style="width:16px; height:16px;">
+              buy 2 @ 699
+            </span>
+
+          </div>
+          <div class="st-price-box">
+            <div class="single-price-value">
+              <span class="st-currency-symbol">&#x20B9</span>
+              <span class="st-sale-price">399</span>
+
+            </div>
+            </div>
+        
+            
+ </div>
+<div class="add-to-cart">
+              <button class="st-atc">
+                add to cart
+
+              </button>
+             
+ </div>
+</div>         
+</div>
+
+
+</div>  -->
+
+<div class="pagination">
+  <ul class="st-pagination"></ul>
+  
+</div>
+</div> 
+</div>
+
+</div>
+</div>
+</div>
+   
+</div>
+</div>
+</div>
+  <script src="first.js"></script>
+</body>
+</html>
+
